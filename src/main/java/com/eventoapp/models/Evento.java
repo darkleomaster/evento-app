@@ -21,6 +21,13 @@ public class Evento implements Serializable{
 	private String local;
 	private String data;
 	
+	public long getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
