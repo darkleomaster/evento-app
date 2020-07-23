@@ -15,22 +15,25 @@
 
 	<h1>Cadastro de Eventos:</h1>
 	<h3><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Eventos</a></h3>
+	
+	<th:block th:include="mensagemValidacao"></th:block>
+	
 	<form class="container" method="post">
 		<div class="row">
 			<div class="input-field col s12">
-				Nome: <input type="text" value="" name="nome"/s>
+				Nome: <input type="text" value="" name="nome"/>
 			</div>
 			<div class="input-field col s6">
-				Local: <input type="text" value="" name="local"/s>
+				Local: <input type="text" value="" name="local"/>
 			</div>
 			<div class="input-field col s3">
-				Data: <input type="date" value="" name="data"/s>
+				Data: <input type="date" value="" name="data"/>
 			</div>
 			<div class="input-field col s3">
-				Horario: <input type="text" value="" name="horario"/s>
+				Horario: <input type="text" value="" name="horario"/>
 			</div>
 		</div>
-		<a type="submit" class="waves-effect waves-light btn"><i class="material-icons left">save</i>Salvar</a>
+		<button type="submit" class="waves-effect waves-light btn">Salvar</button>
 	</form>
 		
 		
