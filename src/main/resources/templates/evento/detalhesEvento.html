@@ -36,9 +36,8 @@
 				<p>Data: <span th:text="${evento.data}"></span></p>
 				<p>Horario: <span th:text="${evento.horario}"></span></p>
 			</div>
-			
-			<th:block th:include="mensagemValidacao"></th:block>
 			</div>
+			<th:block th:include="mensagemValidacao"></th:block>
 				<form method="post" class="container formConvidado">
 				<div class="row">
 					<div class="input-field col s12">
@@ -61,12 +60,14 @@
 				<tr>
 					<th>Nome Convidado</th>
 					<th>RG</th>
+					<th>Deletar</th>
 				</tr>
 			</thead>
 			</tbody>	
 				<tr th:each="convidado : ${convidados}">
 					<td><span th:text="${convidado.nomeConvidado}"></span></td>
 					<td><span th:text="${convidado.rg}"></span></td>
+					<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarConvidado').arg(0, convidado.rg)).build()}"><i class="material-icons">delete_forever</i></a></td>
 				</tr>
 			</tbody>
 		</table>
